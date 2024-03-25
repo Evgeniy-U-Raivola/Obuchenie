@@ -1,0 +1,26 @@
+чтение сканнером
+------------------------------------------------------------------------------------
+     Scanner T = new Scanner(new File("C:\\08_JAVA\\ReadWrite\\src\\input.txt"));
+        String w;
+        while(T.hasNextLine()) {
+            w=T.nextLine();
+            System.out.println(w);
+        }
+-------------------------------------------------------------------------------------
+чтение всего файла в LIST 
+      List<String> l1;
+        Path inpFile= Paths.get("C:\\08_JAVA\\ReadWrite\\src\\input.txt");
+        l1= Files.readAllLines(inpFile);
+        for ( String w : l1) {
+            System.out.println(w);
+        }
+-------------------------------------------------------------------------------------
+
+      BufferedReader work=new BufferedReader(new FileReader("C:\\08_JAVA\\ReadWrite\\src\\input.txt"));
+        String w=work.readLine();
+        while ( w != null ) {
+            System.out.println(w);
+            w=work.readLine();
+        }
+         work.close();
+-------------------------------------------------------------------------------------
